@@ -3,11 +3,11 @@ from flask import Flask, render_template
 app = Flask(__name__)
 name = 'craig'
 
-@app.route('/')
+@app.route('/web/')
 def home():
   return "<h1>Hello World</h1>"
 
-@app.route('/web')
+@app.route('/web/index')
 def webpage():
   return render_template('webpage.html', title='My page', myname=name)
 
